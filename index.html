@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astral Blik Zone - Sklep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Astral Blik Zone</h1>
+    <nav>
+        <a href="#products">Produkty</a>
+        <a href="#about">O nas</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#login">Logowanie</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="products">
+        <h2>Nasze Produkty</h2>
+        <div class="product">
+            <h3>Dostęp do bramki</h3>
+            <p>Uzyskaj dostęp do bramki, aby korzystać z najlepszych funkcji.</p>
+            <p>Cena: <strong>99 PLN</strong></p>
+            <a href="#" class="button">Kup teraz</a>
+        </div>
+        <div class="product">
+            <h3>Konto OLX</h3>
+            <p>Zakup konta OLX do łatwego handlu online.</p>
+            <p>Cena: <strong>79 PLN</strong></p>
+            <a href="#" class="button">Kup teraz</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>O nas</h2>
+        <p>Astral Blik Zone to innowacyjny sklep internetowy, który oferuje dostęp do bramek oraz kont OLX. Naszym celem jest zapewnienie najlepszych rozwiązań dla naszych klientów, aby ułatwić im handel online.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami!</p>
+        <form>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br><br>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <br><br>
+            <button type="submit" class="button">Wyślij</button>
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Logowanie</h2>
+        <form id="loginForm">
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" required>
+            <br><br>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" required>
+            <br><br>
+            <button type="submit" class="button">Zaloguj się</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>© 2024 Astral Blik Zone - Wszystkie prawa zastrzeżone</p>
+</footer>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Zapobiegaj domyślnej akcji formularza
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Prosta walidacja (w prawdziwej aplikacji powinno się to robić na serwerze)
+        if (username === "user" && password === "password") {
+            alert("Zalogowano pomyślnie!");
+        } else {
+            alert("Niepoprawna nazwa użytkownika lub hasło.");
+        }
+    });
+</script>
+
+</body>
+</html>
